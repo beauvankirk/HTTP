@@ -115,7 +115,7 @@ Library
 
   Extensions: FlexibleInstances
 
-Build-depends: mtl >= 2.0 && < 2.3
+  Build-depends: mtl >= 2.0 && < 2.3
 
   if flag(network-uri)
     Build-depends: network-uri == 2.6.*, network >= 2.6 && < 2.9
