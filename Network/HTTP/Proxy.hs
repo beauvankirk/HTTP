@@ -104,9 +104,9 @@ registryProxyString = catchIO
     enable <- fmap toBool $ regQueryValueDWORD hkey "ProxyEnable"
     if enable
 #if MIN_VERSION_Win32(2,6,0)
-        then fmap Just $ regQueryValue hkey "ProxyServer"
+        then fmap Just $ regQueryDefaultValue hkey "ProxyServer"
 #else
-        then fmap Just $ regQueryValue hkey (Just "ProxyServer")
+        then fmap Just $ regQueryDefaultValue hkey (Just "ProxyServer")
 #endif
         else return Nothing)
   (\_ -> return Nothing)
