@@ -47,7 +47,7 @@ import System.Environment
 
 #if defined(WIN32)
 import System.Win32.Types   ( DWORD, HKEY )
-import System.Win32.Registry( hKEY_CURRENT_USER, regOpenKey, regCloseKey, regQueryValue, regQueryValueEx )
+import System.Win32.Registry( hKEY_CURRENT_USER, regOpenKey, regCloseKey, regQueryDefaultValue, regQueryValueEx )
 import Control.Exception    ( bracket )
 import Foreign              ( toBool, Storable(peek, sizeOf), castPtr, alloca )
 #endif
